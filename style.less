@@ -264,7 +264,6 @@ a img {
 	width: 100%;
 }
 
-
 /*
  * Mixins
  */
@@ -493,10 +492,417 @@ ol {
  * Styling
  */
 
-body{
-	background: #f6f6f6;
+html,
+body {
+	height: 100%;
+	width: 100%;
 }
 
-h1{
-	color: red;
+header#header {
+	.wrapper;
+	background-color: #26343F;
+	position: fixed;
+	z-index: 999;
+
+	.inner {
+
+		a {
+			text-decoration: none;
+
+			&:active,
+			&:focus, 
+			&:hover {
+
+			}
+
+		}
+
+		#site-name {
+			float: left;
+			margin: @line-height 10px;
+
+			a {
+				color: #FFFFFF;
+				float: left;
+				font-family: 'Montserrat', serif;
+				font-size: 25px;
+				font-size: 2.5rem;
+			    font-weight: 800;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+
+				span {
+					color: @link-color;
+				}
+
+			}
+
+		}
+
+		#toggle-main-navigation {
+			.animate-this(background-color, 0.55s, ease-in-out);
+			.border-radius(5px);
+			color: #FFFFFF;
+			float: right;
+			font-size: 30px;
+			font-size: 3.0rem;
+			margin: @line-height 10px;
+			padding: 5px 7px;
+			position: relative;
+			top: -5px;
+			right: -7px;
+			text-align: right;
+
+			&.active {
+				background: @blue;
+			}
+
+			&:active,
+			&:focus,
+			&:hover {
+			}
+
+		}
+
+	}
+
+}
+
+#main-navigation {
+	display: none;
+	background-color: #FFFFFF;
+	min-height: 100%;
+	min-width: 100%;
+	opacity: 0.95;
+	position: fixed;
+	z-index: 1;
+
+	ul {
+		.border-box;
+		bottom: 0;
+		display: block;
+		height: 50%;
+		left: 0;
+		list-style-type: none;
+		margin: auto;
+		overflow: auto;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 50%;
+
+		li {
+			display: inline;
+
+			a {
+				.animate-this(color, 0.125s, ease-in-out);
+				border-bottom: 1px solid #CCCCCC;
+				float: left;
+				font-size: 40px;
+				font-size: 4rem;
+				font-weight: 800;
+				padding: @line-height/2 0;
+				text-align: center;
+				text-decoration: none;
+				width: 100%;
+
+				&:active,
+				&:focus, 
+				&:hover {
+					color: @yellow;
+				}
+
+			}
+
+			&:last-child a {
+				border-bottom: 0;
+			}
+
+		}
+
+	}
+
+}
+
+#sub-header {
+	.wrapper;
+	background: #334452 url('assets/img/me.jpg') no-repeat bottom right;
+	background-size: contain;
+	height: @line-height * 11;
+	margin-top: 106px;
+	text-align: center;
+
+	#tagline {
+		.animated(2s);
+		.fadeIn;
+		clear: both;
+		color: #FFFFFF;
+		display: inline-block;
+		font-size: 32px;
+		font-size: 3.2rem;
+		font-family: 'Montserrat', serif;
+	    font-weight: 800;
+	    margin-top: @line-height * 2.2;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+
+		&:after {
+			background-color: #FFFFFF;
+			content: "";
+			display: block;
+			float: none;
+			clear: both;
+			height: 2px;
+			margin: @line-height auto;
+			width: 60px;
+		}
+
+	}
+
+	#tagline-sub {
+		.animated(4s);
+		.fadeIn;
+		clear: both;
+		color: @text-color;
+		display: block;
+		font-size: 18px;
+		font-size: 1.8rem;
+		font-family: 'Montserrat', serif;
+		letter-spacing: 0.15em;
+		margin-bottom: @line-height * 1.25;
+		text-transform: uppercase;
+		width: 100%;
+	}
+
+	.cta {
+		.animated(6s);
+		.animate-this(all, 0.3s, ease-in-out);
+		.fadeIn;
+	}
+
+}
+
+#content {
+	.wrapper;
+
+	.spacer {
+		.column-2;
+
+		@media(max-width: 960px) {
+			display: none;
+		}
+
+	}
+
+	#posts {
+		.column-8;
+		margin: @line-height*2 10px;
+
+		h1#post-title {
+			font-size: 38px;
+			font-size: 3.8rem;
+			margin-bottom: @line-height / 2;
+			text-align: center;
+		}
+
+		p.meta {
+			color: lighten(@text-color, 12.5%);
+			font-size: 14px;
+			font-size: 1.4rem;
+			letter-spacing: 0.2em;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		footer#share-post {
+			.border-box;
+			border: 2px solid lighten(@text-color, 32.5%);
+			clear: both;
+			float: left;
+			margin: @line-height 0;
+			padding: @line-height;
+			width: 100%;
+
+			h2 {
+				font-size: 24px;
+				font-size: 2.4rem;
+				letter-spacing: 0.1em;
+				margin-bottom: 0;
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			p {
+				font-size: 16px;
+				font-size: 1.6rem;
+				text-align: center;
+
+				&:last-child { 
+					margin-bottom: 0;
+				}
+
+			}
+
+		}
+
+		aside#related-posts {
+			clear: both;
+			float: left;
+			margin: @line-height 0;
+
+			h2 {
+				font-size: 30px;
+				font-size: 3rem;
+				text-align: center;
+			}
+
+			section {
+				.border-box;
+				float: left;
+				width: 50%;
+
+				&:nth-child(even) {
+					padding-right: 20px;
+				}
+
+				&:nth-child(odd) {
+					padding-left: 20px;
+				}
+
+				h3 {
+					border-top: 2px solid lighten(@text-color, 32.5%);
+					display: block;
+					font-size: 22px;
+					font-size: 2.2rem;
+					margin-bottom: @line-height / 10;
+					padding-top: @line-height / 2; 
+				}
+
+				p {
+					font-size: 15px;
+					font-size: 1.5rem;
+					line-height: @line-height / 1.25;
+					margin-bottom: @line-height / 2;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+#footer {
+	.wrapper;
+	background: #334452;
+
+	p {
+		.column-12;
+		color: @text-color;
+		font-size: 12px;
+		font-size: 1.2rem;
+		letter-spacing: 0.175em;
+		margin-bottom: @line-height;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	ul {
+		.column-12;
+		float: left;
+		margin: @line-height 0 0 0;
+		padding: 0;
+		text-align: center;
+		width: 100%;
+
+		li {
+			display: inline;
+			font-size: 22px;
+
+			a {
+				.animate-this(all, 0.25s, ease-in-out);
+				.border-radius(999px);
+				border: 2px solid @text-color;
+				color: @text-color;
+				display: inline-block;
+				height: 32px;
+				line-height: 32px;
+				margin: 0 4px;
+				text-align: center;
+				width: 32px;
+
+				&:active,
+				&:focus,
+				&:hover {
+					color: #FFF;
+					border-color: #FFF;
+					text-decoration: none;
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+.toggle-active {
+	overflow: hidden;
+
+	#header {
+		.animate-this(background-color, 0.55s, ease-in-out);
+		background-color: #F0F0F0;
+
+		.inner #site-name {
+
+			a { 
+				.animate-this(color, 0.55s, ease-in-out);
+				color: #26343F;
+			}
+
+		}
+
+	}
+
+	#main-navigation ul li:nth-child(odd) a {
+		.animated;
+		.bounceInRight;
+	}
+
+	#main-navigation ul li:nth-child(even) a {
+		.animated;
+		.bounceInLeft;
+	}	
+
+}
+
+.toggle-inactive {
+
+	#header {
+		.animate-this(background-color, 0.55s, ease-in-out);
+		background-color: #26343F;
+
+		.inner #site-name {
+
+			a { 
+				.animate-this(color, 0.55s, ease-in-out);
+				color: #FFFFFF;
+			}
+
+		}
+
+	}
+
+	#main-navigation ul li:nth-child(odd) a {
+		.animated;
+		.bounceOutRight;
+	}
+
+	#main-navigation ul li:nth-child(even) a {
+		.animated;
+		.bounceOutLeft;
+	}	
+
 }
