@@ -1,3 +1,498 @@
+/*
+ * Reset LESS
+ */
+
+html, body {
+	border: 0;
+	font-family: sans-serif;
+	font-size: 62.5%;
+	margin: 0;
+	padding: 0;
+}
+
+div, span, object, iframe, img, table, caption, thead, tbody, tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu, nav, footer, header, section, summary, mark, audio, video {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd, ol, ul, li, fieldset, legend, label {
+	border: 0;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup, footer, header, nav, section, audio, video {
+	display: block;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+
+	caption, th, td {
+		text-align: left;
+		vertical-align: middle;
+	}
+
+}
+
+a img {
+	border: 0;
+}
+
+:focus {
+	outline: 0;
+}
+
+/*
+ * Grid system
+ */ 
+.wrapper {
+	clear: both;
+	float: left;
+	width: 100%;
+
+	.inner {
+		margin: 0 auto; 
+		padding: 0 10px;
+		width: 960px;
+
+		@media(min-width: 1200px) {
+			width: 1140px;
+		}
+
+		@media(max-width: 960px) {
+			.border-box;
+			padding: 0 40px;
+			width: 100%;
+		}
+
+	}
+
+}
+
+.column-1, 
+.column-2, 
+.column-3, 
+.column-4, 
+.column-5, 
+.column-6, 
+.column-7, 
+.column-8, 
+.column-9, 
+.column-10, 
+.column-11, 
+.column-12 {
+	float: left;
+	margin: @line-height/2 10px;
+}
+
+.column-1 {
+	width: 60px;
+
+	@media(min-width: 1200px) {
+		width: 75px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-2 {
+	width: 140px;
+
+	@media(min-width: 1200px) {
+		width: 170px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-3 {
+	width: 220px;
+
+	@media(min-width: 1200px) {
+		width: 265px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-4 {
+	width: 300px;
+
+	@media(min-width: 1200px) {
+		width: 360px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-5 {
+	width: 380px;
+
+	@media(min-width: 1200px) {
+		width: 455px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-6 {
+	width: 460px;
+
+	@media(min-width: 1200px) {
+		width: 550px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-7 {
+	width: 540px;
+
+	@media(min-width: 1200px) {
+		width: 645px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-8 {
+	width: 620px;	
+
+	@media(min-width: 1200px) {
+		width: 740px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-9 {
+	width: 700px;	
+
+	@media(min-width: 1200px) {
+		width: 835px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-10 {
+	width: 780px;
+
+	@media(min-width: 1200px) {
+		width: 930px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-11 {
+	width: 860px;
+
+	@media(min-width: 1200px) {
+		width: 1025px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.column-12 {
+	width: 940px;
+
+	@media(min-width: 1200px) {
+		width: 1120px;
+	}
+
+	@media(max-width: 960px) {
+		clear: both;
+		width: 100%;
+	}
+
+}
+
+.clear {
+	float: left;
+	clear: both;
+	width: 100%;
+}
+
+
+/*
+ * Mixins
+ */
+
+ .animate-this(@what: all, @time: 0.5s, @ease: ease-in-out) {
+	-webkit-transition: @what @time @ease;
+	-moz-transition: @what @time @ease;
+	-o-transition: @what @time @ease;
+	-ms-transition: @what @time @ease;
+	transition: @what @time @ease;
+}
+
+.border-radius (@radius) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.border-radiuses (@topright, @bottomright, @bottomleft, @topleft) {
+	-webkit-border-top-right-radius: @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius: @bottomleft;
+	-webkit-border-top-left-radius: @topleft;
+	-moz-border-radius-topright: @topright;
+	-moz-border-radius-bottomright: @bottomright;
+	-moz-border-radius-bottomleft: @bottomleft;
+	-moz-border-radius-topleft: @topleft;
+	border-top-right-radius: @topright;
+	border-bottom-right-radius: @bottomright;
+	border-bottom-left-radius: @bottomleft;
+	border-top-left-radius: @topleft;
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+}
+
+.border-box {
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+}
+
+.box-shadow (@shadow) {
+	-webkit-box-shadow: @shadow;
+	-moz-box-shadow: @shadow;
+	box-shadow: @shadow;
+}
+
+.columns(@number, @gap) {
+	-moz-column-count: @number;
+	-webkit-column-count: @number;
+	column-count: @number;
+	-moz-column-gap: @gap;
+	-webkit-column-gap: @gap;
+	column-gap: @gap;
+}
+
+.elipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.horizontal-gradient (@startColor, @endColor) {
+ 	background-color: @startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+
+.opacity (@opacity: 0.5) {
+	@ieOpacity: @opacity * 100;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{ieOpacity})";
+	filter: ~"alpha(opacity=@{ieOpacity})";	
+	-webkit-opacity: @opacity;
+	-moz-opacity: @opacity;
+	opacity: @opacity;
+}
+
+.vertical-gradient (@startColor, @endColor) {
+	background-color: @startColor;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(top, @startColor, @endColor);
+	background-image: -moz-linear-gradient(top, @startColor, @endColor);
+	background-image: -ms-linear-gradient(top, @startColor, @endColor);
+	background-image: -o-linear-gradient(top, @startColor, @endColor);
+}
+
+
+/*
+ * Styling
+ */
+
+@blue: #55C8E8;
+@green: #1DBE72;
+@yellow: #FFCB2E;
+@gray: #425766;
+
+
+@line-height: 32px;
+@font-size: 17px;
+@text-font: 'Karla', sans-serif;
+@heading-color: #334452;
+@text-color: darken(#8397A6, 5%);
+@link-color: #00B5E2;
+@heading-font: 'Montserrat', serif;
+
+textarea,
+button,
+input,
+body {
+    color: @text-color;
+    font-family: @text-font;
+    font-size: @font-size;
+    line-height: @line-height;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: @link-color;
+    text-decoration: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+        text-decoration: underline;
+    }
+    
+    &.cta {
+        .animate-this(all, 0.1s, ease-in-out);
+        border: 2px solid #FFF;
+        color: #FFF;
+        font-family: @heading-font;
+        font-size: 12px;
+        display: inline-block;
+        letter-spacing: 0.2em;
+        padding: 0 10px;
+        text-transform: uppercase;
+
+        &:active,
+        &:focus,
+        &:hover {
+            background-color: #FFF;
+            color: #334452;
+            text-decoration: none;
+        }
+
+    }
+
+}
+
+h1, h2, h3, h4 {
+    color: @heading-color;
+    font-weight: 700;
+    line-height: @line-height + @line-height / 2;
+    margin-bottom: @line-height;
+
+    a {
+        color: @heading-color;
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: @link-color;
+        }
+
+    }
+
+}
+
+h1 {
+    font-family: @heading-font;
+    font-size: 42px;
+    font-size: 4.2rem;
+}
+
+h2 {
+    font-size: 36px;
+    font-size: 3.6rem;
+}
+
+p, ul, ol, address {
+    margin-bottom: @line-height;
+}
+
+sub,
+sup {
+    font-size: 14px;
+    font-size: 1.4rem;
+    padding-left: 2px;
+}
+
+sub {
+    vertical-align: sub;
+}
+
+sup {
+    vertical-align: super;
+}
+
+hr {
+    background-color: lighten(@text-color, 30%);
+    border: none;
+    height: 2px;
+    margin-bottom: @line-height;
+    width: 100%;
+}
+
+ol {
+
+    li {
+        font-size: 15px;
+        font-size: 1.5rem;
+        line-height: @line-height;
+        margin-bottom: @line-height / 4;
+    }
+
+}
+
+/*
+ * Styling
+ */
+
 body{
 	background: #f6f6f6;
 }
