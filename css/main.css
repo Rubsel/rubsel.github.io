@@ -16,13 +16,15 @@ body {
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #830A3D;
     text-shadow: none;
+    color: #fff;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #830A3D;
     text-shadow: none;
+    color: #fff;
 }
 
 hr {
@@ -64,6 +66,7 @@ body {
     color: #666;
     font: 14px/25px Helvetica, Helvetica Neue, Arial;
     font-weight: lighter;
+    background: #830A3D;
 }
 
 .wrapper {
@@ -85,7 +88,7 @@ body {
     color: #fff;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 50px;
     text-transform: uppercase;
     text-decoration: none;
@@ -93,7 +96,7 @@ body {
 
 .header-container a span {
     color: #fff;
-    font-weight: 300 !important;
+    font-weight: 400 !important;
 }
 
 .sub-header-container {
@@ -117,7 +120,6 @@ body {
     padding-bottom: 10px;
     text-transform: uppercase;
 }
-
 
 .tagline-sub {
     clear: both;
@@ -154,6 +156,10 @@ body {
     color: #710F34;
 }
 
+.main-container {
+    background: #f6f6f6;
+}
+
 .cta-dark {
     clear: both;
     color: #830A3D;
@@ -177,6 +183,7 @@ body {
 .top-footer-container {
     width: 100%;
     text-align: center;
+      background: #f6f6f6;
 }
 
 .footer-container {
