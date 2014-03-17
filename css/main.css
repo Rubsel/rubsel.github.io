@@ -182,6 +182,7 @@ body {
 .footer-container {
     color: #DAB5C5;
     background: #830A3D;
+    letter-spacing: 1px;
     margin-top: 50px;
 }
 
@@ -273,6 +274,26 @@ body {
         clear: both;
         background: #830A3D;
     }
+
+    .header-container a {
+        padding-left: 20px;
+    }
+
+    .tagline {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+     .tagline-sub {
+        width: 90%;
+    }
+
+    p{
+        padding-left: 20px;
+        padding-right: 20px;   
+    }
+
+
 }
 
 
@@ -296,6 +317,10 @@ body {
     .sub-header-container {
         clear: both;
         background: url(../img/Rubsel.png) no-repeat bottom left #830A3D;
+    }
+
+    .header-container a {
+        padding-left: 40px;
     }
 
 
