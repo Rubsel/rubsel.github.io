@@ -1,7 +1,7 @@
-rubsel.github.io
-================
+# rubsel.github.io
 
-Trying this GitHub IO pages thingy.  
+My personal GitHub IO, just for fun.<br>
 Based on the Boilerplate framework.
 
-Rubsel, www.rubsel.com
+Rubsel, design & development<br>
+[rubsel.com](https://rubsel.com)
