@@ -65,7 +65,7 @@ textarea {
 body {
     color: #666;
     font: 14px/25px Helvetica, Helvetica Neue, Arial;
-    font-weight: lighter;
+    font-weight: 300;
     background: #830A3D;
 }
 
@@ -190,15 +190,11 @@ body {
     color: #DAB5C5;
     background: #830A3D;
     letter-spacing: 1px;
-    margin-top: 50px;
 }
 
 .footer-container ul {
-    width: 940px;
-    float: left;
     padding: 0;
     text-align: center;
-    width: 100%;
 }
 
 .footer-container ul li {
@@ -240,14 +236,14 @@ body {
     width: 100%;
 }
 
-.footer-container footer {
+.footer-container .wrapper {
     color: white;
     padding: 20px 0;
     font-size: 11px;
     font-family: 'Lato', sans-serif;
     text-align: center;
     text-transform: uppercase;
-    width: 100%;
+    max-width: 100%;
 }
 
 /* ===============
